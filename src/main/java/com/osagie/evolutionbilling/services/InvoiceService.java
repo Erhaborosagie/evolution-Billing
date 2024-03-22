@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class InvoiceService {
-    public ResponseEntity<?> getInvoiceLink(HttpServletRequest request) {
+    public ResponseEntity<InvoiceResponse> getInvoiceLink(HttpServletRequest request) {
         InvoiceResponse invoiceLink = InvoiceHelper.generateInvoiceLink(request);
         return ResponseEntity.ok(invoiceLink);
     }
